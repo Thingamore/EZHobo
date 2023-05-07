@@ -1,0 +1,338 @@
+script "ezhobo.ash";
+/* GLOBAL VARS */
+boolean hamster; 
+boolean coat;
+
+int turns;
+string rlogs = visit_url("clan_raidlogs.php");
+
+
+void preadv(){
+if(item_amount($item[Autumn-aton]).to_boolean()){
+    print("Sending your autumn-aton!", "green");
+    cli_execute("autumnaton send Shadow Rift");
+}
+
+if((have_effect($effect[Everything Looks Yellow]) == 0) && (available_amount($item[Jurassic Parka]).to_boolean())){
+    print("Using your free YR!", "green");
+
+    cli_execute("checkpoint");
+    cli_execute("parka dilophosaur");
+    equip($item[Jurassic Parka]);
+    cli_execute("/aa none");
+
+    string spit = "if hasskill bowl backwards; skill bowl backwards; endif; skill spit jurassic acid; abort;";
+    adv1($location[Shadow Rift], -1, spit);
+    if(handling_choice() == true){ run_choice(5); }
+    cli_execute("outfit checkpoint");
+
+} 
+
+if((get_property("sweat") == 100) && (get_property("_sweatOutSomeBoozeUsed") == 3)){
+    print("Sweating out some sweat!", "green");
+    use_skill($skill[Make Sweat-ade]);
+}
+
+if(((get_property("_coldMedicineConsults")) <= 5) && visit_url("campground.php?action=workshed",false,true).contains_text('Extrovermectin&trade;')){
+    visit_url("campground.php?action=workshed");
+    run_choice(5);
+
+} 
+
+if(get_property("lastEncounter") == "Poetic Justice" && have_skill($skill[Tongue of the Walrus])){
+  use_skill(1, $skill[Tongue of the Walrus]);
+}
+
+if(have_effect($effect[Beaten Up]).to_boolean()){
+  abort("uh-oh. We lost the last combat.");
+}
+
+}
+
+boolean sewer_finished (string playerID) {
+  return contains_text(rlogs, playerId + ") made it through the sewer");
+}
+
+boolean sewers(string runtype){
+  if(sewer_finished(my_id())){
+    print("Sewer already finished!", 'teal');
+    return true;
+  }
+
+
+  /* INFO: For matching water level */
+  matcher water_level_matcher = create_matcher("lowered the water level\\s+(\\d+)\\s+times", rlogs);
+  int wlev_turns;
+  while (water_level_matcher.find()){
+    wlev_turns = (water_level_matcher.group(1)).to_int();
+  }
+
+  print(`Water level: {wlev_turns}0 cm / 200 cm`);
+  if(wlev_turns < 20 || !hamster){
+    set_property ("choiceAdventure197" , "3") ;
+  } else {
+    set_property( "choiceAdventure197" , "1");
+  }
+
+  /* INFO: For matching grates opened*/
+  matcher sewer_grate_matcher = create_matcher("\\bopened\\s+(\\d+)\\s+sewer grates?", rlogs);
+  int sewer_grate_turns;
+
+  while(sewer_grate_matcher.find()){
+    sewer_grate_turns = (sewer_grate_matcher.group(1)).to_int();
+  }
+
+  print("Grates opened: " + sewer_grate_turns);
+
+  if(sewer_grate_turns < 20 || !hamster){
+    set_property ("choiceAdventure198" , "3") ;
+  } else {
+    set_property( "choiceAdventure198" , "1");
+  }
+
+
+  int [item] sewer_consumables = {
+    $item[gatorskin umbrella] : 1,
+    $item[unfortunate dumplings] : 1,
+    $item[sewer wad] : 1,
+    $item[bottle of ooze-o] : 1,
+    $item[oil of oiliness] : 3,
+  }; 
+
+
+
+
+  set_property("choiceAdventure199", "1");
+
+  set_property("choiceAdventure211", ""); // We should never gnaw bars =(
+  set_property("choiceAdventure212", ""); 
+
+
+  maximize("-combat 25 min 30 max, 999 bonus gatorskin umbrella, 3000 bonus hobo code binder", false);
+
+
+  string combat_filter = "if hasskill bowl sideways; skill bowl sideways; endif; if hasskill lunging-thrust smack; skill lunging-thrust smack; endif; attack; repeat !times 10";
+  if(hamster){
+    combat_filter = "lol runaway";
+  } 
+
+
+  while (!sewer_finished(my_id()) || !(get_property("lastEncounter") == "At Last!")) {
+    if (my_adventures() == 0 || turns <= 0){
+      abort("No more turns to spend!");
+    }
+
+    foreach itm, qty in sewer_consumables{
+      if(item_amount(itm) < qty && coat){
+        retrieve_item(qty, itm);
+      }
+    }
+
+    preadv();
+    adventure(1, $location[A maze of sewer tunnels], combat_filter);
+    turns--;
+
+    if(expected_damage($monster[C. H. U. M.]) > my_hp()){
+      restore_hp(my_maxhp());
+    }
+
+
+    if (have_equipped($item[gatorskin umbrella]) == false)
+      equip($item[gatorskin umbrella]) ;
+  }
+
+
+  return sewer_finished(my_id());
+}
+
+
+int hobo_parts(element ele){
+
+  string richard = visit_url("clan_hobopolis.php?place=3&action=talkrichard&whichtalk=3");	
+  int hobopart_amount;
+
+  element [string] parts = {
+  "pairs of charred hobo boot(s)?": $element[Hot],
+  "pair(s)? of frozen hobo eyes": $element[Cold],
+  "pile(s)? of stinking hobo guts": $element[Stench],
+  "creepy hobo skull(s)?": $element[Spooky],
+  "hobo crotch(es)?": $element[Sleaze],
+  "hobo skin(s)?":$element[None],
+  };
+
+
+  foreach matcher_string, elem in parts{
+    hobopart_amount = 0;
+    matcher hoboparts = create_matcher(`Richard has <b>(\\d+)</b> {matcher_string}`, richard);
+    while (hoboparts.find()) {
+      hobopart_amount = hoboparts.group(1).to_int();
+    }
+
+    if(ele == elem){
+      return hobopart_amount;
+    }
+  }
+
+  return 0;
+}
+
+boolean confirm;
+void town_square_combat(string settings) {
+
+  string[int] arguments;
+  arguments = split_string(settings, " ");
+
+  print(`Spending {arguments[1]} turns overkiling hobos with {arguments[0]}!`, "teal"); 
+
+  int parts_to_obtain = arguments[1].to_int();
+  element elemt = arguments[0].to_element();
+  string hobo_combat = "skill stuffed mortar shell; use porquoise-handled sixgun; abort";
+  set_property("currentMood", "apathetic");
+
+  switch {
+    default:
+      abort("Provide an actual element!");
+
+    case(elemt == $element[None]):
+      use_skill($skill[Spirit of Nothing]);
+      set_auto_attack("Lunging Thrust-Smack");
+      break;
+
+    case(elemt == $element[Hot]):
+      use_skill($skill[Spirit of Cayenne]);
+      set_auto_attack(0);
+      break;
+
+    case(elemt == $element[Cold]):
+      use_skill($skill[Spirit of Peppermint]);
+      set_auto_attack(0);
+      break;
+
+    case(elemt == $element[Stench]):
+      use_skill($skill[Spirit of Garlic]);
+      set_auto_attack(0);
+      break;
+
+    case(elemt == $element[Spooky]):
+      use_skill($skill[Spirit of Wormwood]);
+      set_auto_attack(0);
+      break;
+
+    case(elemt == $element[Sleaze]):
+      use_skill($skill[Spirit of Bacon Grease]);
+      set_auto_attack(0);
+      break;
+  }
+
+  while(parts_to_obtain > 0){
+    preadv();
+
+    int expected_shell_damage = ((32) + (0.5 * my_buffedstat($stat[mysticality]))) * numeric_modifier("Spell Damage");
+    if((expected_shell_damage < (500 + numeric_modifier("-Monster Level"))) && !confirm && elemt != $element[None]){
+      if (!user_confirm("You may not be overkilling the hobos, are you sure you want to adventure?")){
+        abort();
+      }
+      confirm = true;
+    }
+
+    adventure($location[Hobopolis Town Square], 1, hobo_combat);
+    parts_to_obtain--;
+    print(`Turns remaining for element {elemt}: {parts_to_obtain}`, "teal");
+  }
+
+}
+
+boolean town_square(int turnss){
+  set_property("choiceAdventure272" , "2");
+
+  string town_map = visit_url("clan_hobopolis.php?place=2");
+
+  if (contains_text(town_map , "clan_hobopolis.php?place=8")){
+    return true;
+  }
+
+  boolean wearing_outfit;
+
+  foreach x, outfit in get_custom_outfits(){
+    if(contains_text(outfit.to_lower_case(), "hobo")){
+      outfit(outfit);
+      wearing_outfit = true;
+    }
+  }
+
+  
+  if(!wearing_outfit){
+    if(!user_confirm("Please select an outfit to wear! Or save an outfit with the 'hobo' in it's name, and it'll default swapping to that! (YES to continue with current outfit)"))
+      abort("User abort.");
+  }
+
+  while(!contains_text(town_map, "clan_hobopolis.php?place=8") && turns > 6){
+
+    foreach elem in $elements[Hot, Cold, Stench, Spooky, Sleaze, None]{
+
+      if(turns < 6){
+        abort("Finished using all your set turns!");
+      }
+
+      if (hobo_parts(elem) < 7){
+        town_square_combat(`{elem} {7 - hobo_parts(elem)}`);
+
+        if (hobo_parts(elem) < 7){
+          abort("We couldn't overkill the hobos. uh-oh.");
+        }
+      }
+    }
+
+  
+    print("Launching 7 schobos!", "orange");
+    visit_url("clan_hobopolis.php?place=3&action=talkrichard&whichtalk=3&preaction=simulacrum&qty=7");
+  }
+
+  return contains_text(town_map , "clan_hobopolis.php?place=8"); 
+}
+
+
+print("Usage: ezhobo {run type} {turns}");
+void main(string args){
+
+  string[int] options;
+  options = split_string(args, " ");
+  print(`Running {options[1]} turns and attempting a {options[0]} run, in clan "{get_clan_name()}"`, "teal"); 
+
+  turns = to_int(options[1]);
+  int current_turns = my_adventures();
+  string run_type = to_lower_case(options[0]);
+
+  switch(run_type){
+    default:
+    abort("Invalid location selection. Valid selections include: none, coat, hamster");
+    
+    case "none":
+    break;
+
+    case "coat":
+    coat = true;
+    break;
+
+    case "hamster":
+    hamster = true;
+    coat = true; 
+    break;
+  }
+
+  set_auto_attack(0);
+
+  if(sewers(coat)){
+    print("Congratulations little one, you did the first thing. (Through sewers!)", "orange");
+  } else {
+    abort("crap.");
+  }
+
+  if(town_square(turns)){
+    print("Congratulations little one, you've done the second thing. (Town complete!)", "orange");
+  } else {
+    abort("not good");
+  }
+
+
+}
