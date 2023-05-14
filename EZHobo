@@ -211,7 +211,7 @@ void town_square_combat(string settings) {
   print(`Spending {arguments[1]} turns overkiling hobos with {arguments[0]}!`, "teal"); 
   int parts_to_obtain = arguments[1].to_int();
   element elemt = arguments[0].to_element();
-  string hobo_combat = "skill stuffed mortar shell; item porquoise-handled sixgun; abort";
+  string hobo_combat = "skill stuffed mortar shell; item porquoise-handled sixgun; abort;";
 
   switch {
     default:
