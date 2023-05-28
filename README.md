@@ -52,10 +52,6 @@ To Do:
 
 - Ezhobo hamster is not fully a thing yet. 
 
-- Sewers to Town Square hiccups, breaks all confused like (Just rerun to keep going, though worked fine for DoBK on 28May23)
-
-- Not ending after designated number of turns, just churns 'em out (You an manually exit with the esc key or jsut give us all your turns)
-
 - EE yodelling needs to be tweaked (possibly? Acted funny on 27May23 Hodgman run in CDR1)
  
 
