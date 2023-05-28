@@ -1,5 +1,5 @@
 # EZHobo
-Welcome to Ezhobo, your one stop shop for all things Hobopolis automation scripting. In order to run out of the box, the following things are required:
+Welcome to Ezhobo, your one stop shop for all things Hobopolis automation scripting and the basis of the Ascension Speed Society's Feeding (on) the Homeless Initiative. In order to run out of the box, the following things are required:
 
 A Porquoise-handled sixgun
 
@@ -52,17 +52,19 @@ To Do:
 
 - Ezhobo hamster is not fully a thing yet. 
 
-- Sewers to Town Square hiccups, breaks all confused like
+- Sewers to Town Square hiccups, breaks all confused like (Just rerun to keep going)
 
-- Not ending after designated number of turns, just churns 'em out
+- Not ending after designated number of turns, just churns 'em out (You an manually exit with the esc key or jsut give us all your turns)
 
-- EE yodelling needs to be tweaked (possibly?)
+- EE yodelling needs to be tweaked (possibly? Acted funny on 27May23 Hodgman run in CDR1)
  
 
 Latest craze, easy Ezhobo installation!
 
 
 git checkout https://github.com/Thingamore/EZHobo.git
+
+Last but not least, credit for the script work goes to Jimmyking (#3272033), and a special thanks to the mASSes of the Ascension Speed Society Discord for their patience with teaching me things and for being guinea pigs for our work here.
 
 
 
