@@ -38,6 +38,8 @@ To Do:
 - EE yodelling needs to be tweaked (possibly?)
  
 
+Latest craze, easy Ezhobo installation!
+git checkout https://github.com/Thingamore/EZHobo.git
 
 
 
