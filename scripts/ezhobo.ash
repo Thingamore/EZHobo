@@ -180,8 +180,10 @@ boolean sewers(string runtype){
   set_property("choiceAdventure211", ""); // We should never gnaw bars =(
   set_property("choiceAdventure212", ""); 
 
-
-  maximize("-combat 25 min 30 max, 999 bonus gatorskin umbrella, 3000 bonus hobo code binder", false);
+  retrieve_item(1, $item[gatorskin umbrella]);
+  maximize("-combat 25 min 30 max, -weapon, -offhand", false);
+  equip($slot[weapon], $item[gatorskin umbrella]);
+  equip($slot[off-hand], $item[hobo code binder]);
 
 
   string combat_filter = "if hasskill bowl a curveball; skill bowl a curveball; endif; if hasskill lunging-thrust smack; skill lunging-thrust smack; endif; attack; repeat !times 10";
@@ -196,7 +198,7 @@ boolean sewers(string runtype){
     }
 
     foreach itm, qty in sewer_consumables{
-      if(item_amount(itm) < qty && coat){
+      if(available_amount(itm) < qty && coat){
         retrieve_item(qty, itm);
       }
     }
@@ -206,7 +208,7 @@ boolean sewers(string runtype){
     turns--;
     
     if(!have_equipped($item[gatorskin umbrella])){
-      equip($item[gatorskin umbrella]);
+      equip($slot[weapon], $item[gatorskin umbrella]);
     }
 
     if(expected_damage($monster[C. H. U. M.]) > my_hp()){
@@ -261,7 +263,7 @@ void town_square_combat(string settings) {
   element elemt = arguments[0].to_element();
   int parts_to_obtain = arguments[1].to_int();
 
-  string hobo_combat = "skill stuffed mortar shell; use porquoise-handled sixgun; abort";
+  string hobo_combat = "skill stuffed mortar shell; if hasskill 7410; skill 7410; endif; use porquoise-handled sixgun; abort";
 
   int current_parts = elemt.hobo_parts();
 
