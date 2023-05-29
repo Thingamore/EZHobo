@@ -21,7 +21,7 @@ if((have_effect($effect[Everything Looks Yellow]) == 0) && (available_amount($it
     cli_execute("/aa none");
 
     string spit = "if hasskill bowl backwards; skill bowl backwards; endif; skill spit jurassic acid; abort;";
-        adv1($location[The Dire Warren], -1, spit); //There is one hundred percent a better choice of yellow ray target that is avaiable to anyone, but this should work for testing
+    adv1($location[The Dire Warren], -1, spit); //There is one hundred percent a better choice of yellow ray target that is avaiable to anyone, but this should work for testing
     if(handling_choice() == true){ run_choice(5); }
     cli_execute("outfit checkpoint");
 
