@@ -1,39 +1,54 @@
 # EZHobo
-Welcome to Ezhobo, your one stop shop for all things Hobopolis automation scripting and the basis of the Ascension Speed Society's Feeding (on) the Homeless Initiative. In order to run out of the box, the following things are required:
+Welcome to Ezhobo, your one stop shop for all things Hobopolis automation scripting and the basis of the Ascension Speed Society's Feeding (on) the Homeless Initiative.
 
-A Porquoise-handled sixgun
-
-A Hobo Code Binder w/17+ glyphs (15 will work for coat runs)
-
-Either the CLEESH spell available and/or access to free runs (For Hamster runs)
-
-Stuffed Mortar Shell
-
-Flavor of Magic
-
-The ability to coordinate and work with others
+## Installation:
+`git checkout https://github.com/Thingamore/EZHobo.git`
 
 
-Before running, you should also make sure to have an outfit with the word "hobo" in it, in which you overkill Town Square hobos in
+## Requirements:
+**Coat:**
+- [Porquoise-handled sixgun](https://kol.coldfront.net/thekolwiki/index.php/Porquoise-handled_sixgun)
+- [Hobo Code Binder](https://kol.coldfront.net/thekolwiki/index.php/Hobo_code_binder)
+- [Stuffed Mortar Shell](https://kol.coldfront.net/thekolwiki/index.php/Stuffed_Mortar_Shell)
+- [Flavor of Magic](https://kol.coldfront.net/thekolwiki/index.php/Flavour_of_Magic)
+- [Lunging-thrust Smack](https://kol.coldfront.net/thekolwiki/index.php/Lunging_Thrust-Smack)
+
+**Hamster:**
+- [CLEESH](https://kol.coldfront.net/thekolwiki/index.php/CLEESH) and/or a supply of [freeruns](https://kol.coldfront.net/thekolwiki/index.php/Run_Away)
+- Access to [/hobopolis](https://kol.coldfront.net/thekolwiki/index.php/Chat_Guide:_Channels#hobopolis)
+- [17 or more hobo code binder glyphs.](https://kol.coldfront.net/thekolwiki/index.php/Hobo_code_binder)
 
 
-After everything is installed and set up, operation is simple. 
+## Script Options / Settings:
 
+Before running, you should also make sure to have an outfit with the word "hobo" in it, in which you overkill Town Square hobos in.
 
-Step 1: Bait your cage. We here at the Initiative sugggest utilizing ASSBot (#3562551) for all your caging needs
+**Custom outfits:**
+This script uses a maximizer string to try to optimize equipment, though you may want your own equipment for various reasons. Naming custom outfits with the following keywords will override the script outfits, for specific zones:
+- *hobo*
+- *burnbarrel*
+- *esplanade*
+- *heap*
+- *burialgrounds*
+- *district*
 
-  Step 1a: /msg ASSBot status
+## How do I run this?
+
+**Step 1: Bait your cage.** 
+We here at the Initiative sugggest utilizing ASSBot (#3562551) for all your caging needs
+
+   Step 1a: /msg ASSBot status
 
   Step 1b. /msg ASSBot cage [clan name]
 
-Step 2: In the Mafia gcli line, type "Ezhobo [stick/coat/hamster] [###] where stick/coat/hamster is the type of run you are attempting and ### is the number of turns to spend.
+Step 2: In the Mafia gcli line, type `Ezhobo {none/stick/coat/hamster} {###}`. Here none/stick/coat/hamster is the type of run you are attempting and ### is the number of turns to spend.
 
 
 "But what does it do?" you may ask. 
 
 "Hopbopolis." I say.
 
-Ezhobo will...
+**Ezhobo will...**
 
 Clear the sewers in the most efficient manner for your run, accounting for water level and grates as appropriate. It will restock your sewer items, and take you from beginning to end of the maze.
 
@@ -46,7 +61,9 @@ Ezhobo coat will claer EE and BB for those extra delicious Frosty Mugs and Salad
 Ezhobo hamster will mercilessly destroy town square hobos and take you directly to Hodgman. 
 
 
-To Do:
+
+
+## What's next for EZHobo?
 
 - Ezhobo Stick - PLD and Heap suppoert to be added before "ezhobo stick" works
 
@@ -55,12 +72,7 @@ To Do:
 - EE yodelling needs to be tweaked (possibly? Acted funny on 27May23 Hodgman run in CDR1)
  
 
-Latest craze, easy Ezhobo installation!
-
-
-git checkout https://github.com/Thingamore/EZHobo.git
+### Credits:
 
 Last but not least, credit for the script work goes to Jimmyking (#3272033), and a special thanks to the mASSes of the Ascension Speed Society Discord for their patience with teaching me things and for being guinea pigs for our work here.
-
-
 
