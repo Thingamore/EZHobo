@@ -538,7 +538,7 @@ boolean exposure_esplanade(string runtype){
 
   } 
 
-  return visit_url("clan_hobopolis.php?place=5").contains_text("exposureesplanade10") || visit_url("clan_hobopolis.php?place=5").contains_text("exposureesplanade11");
+  return visit_url("clan_hobopolis.php?place=5").contains_text("exposureesplanade10") || visit_url("clan_hobopolis.php?place=5").contains_text("exposureesplanade11") || hobo_lookup("self_large_yodel").to_boolean();
 } 
 
 
@@ -670,7 +670,12 @@ void main(string args){
   }
 
   if(exposure_esplanade(run_type)){
-    print("Reached Frosty!", "orange");
+    if(hobo_lookup("self_large_yodel").to_boolean()){
+      print("You've already yodeled your heart out!", "orange");
+    } else {
+      print("Reached Frosty!", "orange");
+    }
+
   } else {
     abort("Failed to reach Frosty in EE.");
   }
