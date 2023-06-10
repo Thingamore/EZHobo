@@ -46,31 +46,19 @@ Step 2: In the Mafia gcli line, type `Ezhobo {none/stick/coat/hamster} {###}`. H
 
 "But what does it do?" you may ask. 
 
-"Hopbopolis." I say.
+"Hopbopolis." we say.
 
 **Ezhobo will...**
 
 Clear the sewers in the most efficient manner for your run, accounting for water level and grates as appropriate. It will restock your sewer items, and take you from beginning to end of the maze.
 
-Then it will mercilessly beat up hobos in town square for a bit, creating scobos of their various remains every set of 7 parts. From here...
+Then it will mercilessly beat up hobos in town square for a bit, creating scobos of their various remains. From here...
 
 Ezhobo stick will clear the side zones except for the AHBG, cause that place sucks.
 
 Ezhobo coat will claer EE and BB for those extra delicious Frosty Mugs and Salad Forks.
 
-Ezhobo hamster will mercilessly destroy town square hobos and take you directly to Hodgman. 
-
-
-
-
-## What's next for EZHobo?
-
-- Ezhobo Stick - PLD and Heap suppoert to be added before "ezhobo stick" works
-
-- Ezhobo hamster is not fully a thing yet. 
-
-- EE yodelling needs to be tweaked (possibly? Acted funny on 27May23 Hodgman run in CDR1)
- 
+Ezhobo hamster will mercilessly destroy town square hobos and take you directly to Hodgman.  
 
 ### Credits:
 
