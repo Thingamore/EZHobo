@@ -76,10 +76,10 @@ string hobo_combat(int round, monster mon_encountered, string pagetext) {
     return "use seal tooth";
 
     case($monster[Hot Hobo]):
-    break;
+    return "skill Lunging Thrust-Smack";
 
     case($monster[Cold Hobo]):
-    break;
+    return "skill Lunging Thrust-Smack";
 
     case($monster[Stench Hobo]):
 
