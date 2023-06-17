@@ -182,7 +182,7 @@ boolean sewers(string runtype){
 
   string sewer_combat = "if hasskill bowl a curveball; skill bowl a curveball; endif; if hasskill lunging-thrust smack; skill lunging-thrust smack; endif; attack; repeat !times 10";
   if(hamster){
-    sewer_combat = "skill CLEESH;";
+    sewer_combat = "skill CLEESH;attack;";
   } 
 
 
