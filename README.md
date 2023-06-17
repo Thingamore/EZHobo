@@ -62,7 +62,9 @@ Then it will mercilessly beat up hobos in town square for a bit, creating scobos
  Clear the side zones except for the AHBG, cause that place sucks. Enough people use this on a single instance of Hobopolis in a single day and BAM! You got a Whackin' Stick.
 
 `Ezhobo coat ###` will...
- Clear EE and BB for those extra delicious Frosty Mugs and Salad Forks. It will clear some scobos, EE, and then BB before returning to Town Square and going for Hodgman. 
+ Clear EE and BB for those extra delicious Frosty Mugs and Salad Forks. It will clear some scobos, EE, and then BB before returning to Town Square and going for Hodgman.
+ 
+**Warning:** The handling for yodelling and tire stacking, while some primo work, is still a wee bit finnicky. Yodelling is simply because we are limited by the technologies of our time, while BB just gets squirrely sometimes. Suggested practice is to only have two or three people running ezhobo coat at a time instead of seven people all at once. There is also something to be said about the more people going into the instance, the more turns that have to be spent in the sewer maze, so there is a point where too many people running ezhobo coat can push it into ezhobo stick territory by nature of the beast.
 
 `Ezhobo hamster ###` will....
 Mercilessly destroy town square hobos, make scobos of their remains, and take you directly to Hodgman. Unfortunately, Ezhobo Hamster is not completely fully automated at this time. In order to successfully get a Hamster, a group of 7 must still coordinate between classes, elements, and moshing in Town Square. Ezhobo does make this endeavour significantly easier to pull off and we at the Initiative have put some work into finding the best strategies to pull this off. A detailed run strategy can be found/discussed in the ASS Discord Feeding (on) the Homless Inititative thread and will be added here at a later date.    
