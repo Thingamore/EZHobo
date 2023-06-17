@@ -41,8 +41,12 @@ We here at the Initiative sugggest utilizing ASSBot (#3562551) for all your cagi
 
   Step 1b. /msg ASSBot cage [clan name]
 
-Step 2: In the Mafia gcli line, type `Ezhobo {none/stick/coat/hamster} {###}`. Here none/stick/coat/hamster is the type of run you are attempting and ### is the number of turns to spend.
+**Step 2:**
+ In the Mafia gcli line, type one of the following. Here, none/stick/coat/hamster is the type of run you are attempting and ### is the number of turns to spend.
 
+`EZhobo stick ###`
+`EZhobo coat ###`
+`EZhobo hamster ###`
 
 "But what does it do?" you may ask. 
 
@@ -50,15 +54,20 @@ Step 2: In the Mafia gcli line, type `Ezhobo {none/stick/coat/hamster} {###}`. H
 
 **Ezhobo will...**
 
-Clear the sewers in the most efficient manner for your run, accounting for water level and grates as appropriate. It will restock your sewer items, and take you from beginning to end of the maze.
+Clear the sewers in the most efficient manner for your run, accounting for water level and grates as appropriate. It will restock your sewer items, and take you from beginning to end of the maze. 
 
 Then it will mercilessly beat up hobos in town square for a bit, creating scobos of their various remains. From here...
 
-Ezhobo stick will clear the side zones except for the AHBG, cause that place sucks.
+`Ezhobo stick ###` will...
+ Clear the side zones except for the AHBG, cause that place sucks. Enough people use this on a single instance of Hobopolis in a single day and BAM! You got a Whackin' Stick.
 
-Ezhobo coat will claer EE and BB for those extra delicious Frosty Mugs and Salad Forks.
+`Ezhobo coat ###` will...
+ Clear EE and BB for those extra delicious Frosty Mugs and Salad Forks. It will clear some scobos, EE, and then BB before returning to Town Square and going for Hodgman. 
 
-Ezhobo hamster will mercilessly destroy town square hobos and take you directly to Hodgman.  
+`Ezhobo hamster ###` will....
+Mercilessly destroy town square hobos, make scobos of their remains, and take you directly to Hodgman. Unfortunately, Ezhobo Hamster is not completely fully automated at this time. In order to successfully get a Hamster, a group of 7 must still coordinate between classes, elements, and moshing in Town Square. Ezhobo does make this endeavour significantly easier to pull off and we at the Initiative have put some work into finding the best strategies to pull this off. A detailed run strategy can be found/discussed in the ASS Discord Feeding (on) the Homless Inititative thread and will be added here at a later date.    
+
+
 
 ### Credits:
 
