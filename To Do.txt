@@ -1,0 +1,5 @@
+To Do:
+- Rework EE logic based on latest lessons learned for 'stick' and 'coat'
+- Add PLD Support for `stick`
+- Add The Heap support for `stick`
+- Heard mutterings of ezhobo_combat having issue, not sure if still a thing
