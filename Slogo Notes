@@ -1,0 +1,68 @@
+Routing
+
+Step 1: A MAze of Sewer Tunnels - Take 100 turns and farm the tunnels. Sewer Test items are needed in the Kingdom after all.
+Step 2: Town Square part 1 - Scobo until PLD is open
+Step 3: EE - Underkill cobos, break 105 pipes, divert water 13 times, and then big yodel
+Step 4: BB - Makes three stacks of 34 tires and kills hotbos
+Step 5: PLD - Flim flam an then kill sleabos
+Step 6: AHBG - Studies Dances moves and kills spookbos
+Step 7: The Heap - Minds the stench level and will attempt to hit I, Refuse while killing stenchbos
+Step 8: Town Square part 2 - Scobo to Hodge
+
+Required Things 
+
+1. CustomCombatScript "Slogo"
+    a. Skills:
+        - Lunging Thrust Smack
+        - Stuffed Mortar Shell
+        - Saucegeyser
+        - Flavor of Magic
+    b. Equipment pieces:
+        - Miniborg Stomper
+        - Porquoise Sixgun
+
+2. Moods: //Maybe switch out for Gain functions? 
+    [ eenc ] //NC to ~30%, thorns damage for underkilling hobos
+    lose_effect eviscerate! => use 1 wind-up whatsian robot
+    lose_effect fangs and pangs => use 1 wind-up vampire teeth
+    lose_effect gummi badass => use 1 gummi fang
+    lose_effect it's electric! => use 1 eel battery
+    lose_effect jalape&ntilde;o saucesphere => cast 1 jalape&ntilde;o saucesphere
+    lose_effect little mouse skull buddy => use 1 mouse skull
+    lose_effect mayeaugh => use 1 glob of spoiled mayo
+    lose_effect permanent halloween => use 1 spooky sound effects record
+    lose_effect psalm of pointiness => cast 1 the psalm of pointiness
+    lose_effect pygmy drinking buddy => use 1 pygmy phone number
+    lose_effect skeletal cleric => skeleton cleric
+    lose_effect skeletal warrior => skeleton warrior
+    lose_effect skeletal wizard => skeleton wizard
+    lose_effect smokin' => use 1 cheap cigar butt
+    lose_effect smooth movements => cast 1 smooth movement
+    lose_effect spiky frozen hair => use 1 frozen shampoo-conditioner
+    lose_effect spiky shell => cast 1 spiky shell
+    lose_effect the sonata of sneakiness => cast 1 the sonata of sneakiness
+
+    [ nc ] //Boost NC in ahbg, the heap, bb
+    lose_effect cletus's canticle of celerity => cast 1 cletus's canticle of celerity
+    lose_effect feeling sneaky => use 1 trampled ticket stub
+    lose_effect fresh scent => use either 1 chunk of rock salt, 1 deodorant
+    lose_effect shortly buttered => use 1 short stick of butter
+    lose_effect smooth movements => cast 1 smooth movement
+    lose_effect the sonata of sneakiness => cast 1 the sonata of sneakiness
+
+    [ pld ] //currently inefficiently buffs combat rate
+    lose_effect carlweather's cantata of confrontation => cast 1 carlweather's cantata of confrontation
+    lose_effect everything must go! => use 1 violent pastilles
+    lose_effect high colognic => use 1 musk turtle
+    lose_effect lion in ambush => use 1 lion musk
+    lose_effect musk of the moose => cast 1 musk of the moose
+
+Optional Things: 
+
+1. Familiar Snapper
+2. Lucky Gold Ring
+3. Mafia Thumb Ring
+4. Carnivorous Potted Plant
+5. Mr. Cheeng's spectacles
+6. Can of Mixed everything 
+7. Jurassic Parka
