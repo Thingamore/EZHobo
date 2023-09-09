@@ -124,7 +124,7 @@ if ( contains_text( visit_url("clan_hobopolis.php?place=5") , "exposureesplanade
         visit_url('choice.php?pwd&whichchoice=1396&option=1&cat=hobo');
         }
     //Pre adventuring systems check...
-    maximize("-combat 25 min, 0.9 Jurrasic Parka, 0.6 bonus Li'l Businessman Kit, 0.8 bonus lucky gold ring, 0.4 bonus mafia thumb ring, 0.3 bonus cheeng's spectacles, 0.2 bonus carnivorous potted plant", false);
+    maximize("-combat 25 min, 0.9 Jurassic Parka, 0.6 bonus Li'l Businessman Kit, 0.8 bonus lucky gold ring, 0.4 bonus mafia thumb ring, 0.3 bonus cheeng's spectacles, 0.2 bonus carnivorous potted plant", false);
     cli_execute( "set customCombatScript = Slogo;" );
     cli_execute( "parka hot" ); //NC Boost
     cli_execute( "mood eenc" ); //Boosts NC and passive damage
@@ -191,7 +191,7 @@ if ( contains_text( visit_url("clan_hobopolis.php?place=4") , "burnbarrelblvd11.
 	set_property( "choiceAdventure207" , "2");	//Hot Dog!: Walk Away
 	set_property( "choiceAdventure213" , "2");	//Piping Hot: Leave the valve alone
 	set_property( "choiceAdventure201" , "2");	//Home in the Range: Leave combat with Ol' Scratch (0 will show in browser)
-	maximize("-combat 25 min, 0.9 Jurrasic Parka, 0.6 bonus Li'l Businessman Kit, 0.8 bonus lucky gold ring, 0.4 bonus mafia thumb ring, 0.3 bonus cheeng's spectacles, 0.2 bonus carnivorous potted plant", false);
+	maximize("-combat 25 min, 0.9 Jurassic Parka, 0.6 bonus Li'l Businessman Kit, 0.8 bonus lucky gold ring, 0.4 bonus mafia thumb ring, 0.3 bonus cheeng's spectacles, 0.2 bonus carnivorous potted plant", false);
 	cli_execute( "set customCombatScript = Slogo;" );
 	cli_execute( "parka hot" );
 	cli_execute( "mood nc" );
@@ -257,7 +257,7 @@ if ( contains_text( visit_url("clan_hobopolis.php?place=8") , "purplelightdistri
 	set_property( "choiceAdventure223" , "3");	//Getting Clubbed: Flimflam (3) x8, Try to get inside (1)
 	set_property( "choiceAdventure224" , "2");	//Kills 10% remaining sleaze hobos
 	set_property( "choiceAdventure205" , "2");	//Van, Damn: Leave combat with Chester
-	maximize("+combat, 0.9 Jurrasic Parka, 0.6 bonus Li'l Businessman Kit, 0.8 bonus lucky gold ring, 0.4 bonus mafia thumb ring, 0.3 bonus cheeng's spectacles, 0.2 bonus carnivorous potted plant", false);
+	maximize("+combat, 0.9 Jurassic Parka, 0.6 bonus Li'l Businessman Kit, 0.8 bonus lucky gold ring, 0.4 bonus mafia thumb ring, 0.3 bonus cheeng's spectacles, 0.2 bonus carnivorous potted plant", false);
 	cli_execute( "set customCombatScript = Slogo;" );
 	cli_execute( "parka sleaze" );
 	cli_execute( "remedy smooth movements, the sonata of sneakiness, patent invisibility" );
@@ -319,7 +319,7 @@ if ( contains_text( visit_url("clan_hobopolis.php?place=7") , "burialground11.gi
 	set_property( "choiceAdventure221" , "1");	//A Chiller Night (1): Study the hobos' dance moves, then dance with them
 	set_property( "choiceAdventure222" , "1");	//A Chiller Night: Dance with them x23
 	set_property( "choiceAdventure204" , "2");	//Welcome to You: Leave combat with Zombo (0 will show in browser)
-	maximize("-combat 25 min, 0.9 Jurrasic Parka, 0.6 bonus Li'l Businessman Kit, 0.8 bonus lucky gold ring, 0.4 bonus mafia thumb ring, 0.3 bonus cheeng's spectacles, 0.2 bonus carnivorous potted plant", false);
+	maximize("-combat 25 min, 0.9 Jurassic Parka, 0.6 bonus Li'l Businessman Kit, 0.8 bonus lucky gold ring, 0.4 bonus mafia thumb ring, 0.3 bonus cheeng's spectacles, 0.2 bonus carnivorous potted plant", false);
 	cli_execute( "set customCombatScript = Slogo;" );
 	cli_execute( "parka hot" ); //NC boost
 	cli_execute( "remedy carlweather's cantata, everything must go, high colognic, lion in ambush, musk of the moose" );
@@ -373,7 +373,7 @@ if ( contains_text( visit_url("clan_hobopolis.php?place=6") , "theheap11.gif") )
 	set_property( "choiceAdventure216" , "2");	//The Compostal Service: Begone (Needs to be used (1) periodically though)
 	set_property( "choiceAdventure214" , "1");	//You vs. The Volcano: Kick Stuff into the Hole
 	set_property( "choiceAdventure203" , "2");	//Deep Enough to Dive: Leave combat with Oscus (0 will show in browser)
-	maximize("-combat 25 min, 0.9 Jurrasic Parka, 0.6 bonus Li'l Businessman Kit, 0.8 bonus lucky gold ring, 0.4 bonus mafia thumb ring, 0.3 bonus cheeng's spectacles, 0.2 bonus carnivorous potted plant", false);
+	maximize("-combat 25 min, 0.9 Jurassic Parka, 0.6 bonus Li'l Businessman Kit, 0.8 bonus lucky gold ring, 0.4 bonus mafia thumb ring, 0.3 bonus cheeng's spectacles, 0.2 bonus carnivorous potted plant", false);
 	cli_execute( "set customCombatScript = Slogo;" );
 	cli_execute( "parka hot" ); //NC Boost
 	cli_execute( "mood nc" );
