@@ -52,12 +52,11 @@ if ( contains_text( visit_url("clan_hobopolis.php?place=2") , "clan_hobopolis.ph
     else
     {
     //To Snapper Up for hobos and that sweet sweet cologne
-    if( have_familiar($familiar[Red-nosed snapper]) && my_familiar() != $familiar[Red-nosed Snapper] )
-        {
-        use_familiar($familiar[Red-nosed snapper]);
+    if( have_familiar($familiar[Red-nosed snapper]) && my_familiar() != $familiar[Red-nosed Snapper] ){
+        use_familiar($familiar[Red-nosed snapper]);}
+    if( my_familiar() == $familiar[Red-nosed Snapper] ){  
         visit_url('familiar.php?action=guideme&pwd'); 
-        visit_url('choice.php?pwd&whichchoice=1396&option=1&cat=hobo');
-        }
+        visit_url('choice.php?pwd&whichchoice=1396&option=1&cat=hobo');}
     //Pre adventuring systems check...
     cli_execute( "set customCombatScript = Slogo;" );
     set_property( "choiceAdventure272" , "2"); //No marketplace
@@ -117,12 +116,11 @@ if ( contains_text( visit_url("clan_hobopolis.php?place=5") , "exposureesplanade
     else
     {
     //To Snapper Up for hobos and that sweet sweet cologne
-    if( have_familiar($familiar[Red-nosed snapper]) && my_familiar() != $familiar[Red-nosed Snapper] )
-        {
-        use_familiar($familiar[Red-nosed snapper]);
+    if( have_familiar($familiar[Red-nosed snapper]) && my_familiar() != $familiar[Red-nosed Snapper] ){
+        use_familiar($familiar[Red-nosed snapper]);}
+    if( my_familiar() == $familiar[Red-nosed Snapper] ){  
         visit_url('familiar.php?action=guideme&pwd'); 
-        visit_url('choice.php?pwd&whichchoice=1396&option=1&cat=hobo');
-        }
+        visit_url('choice.php?pwd&whichchoice=1396&option=1&cat=hobo');}
     //Pre adventuring systems check...
     maximize("-combat 25 min, 0.9 bonus Jurassic Parka, 0.6 bonus Li'l Businessman Kit, 0.8 bonus lucky gold ring, 0.4 bonus mafia thumb ring, 0.3 bonus cheeng's spectacles, 0.2 bonus carnivorous potted plant", false);
     cli_execute( "set customCombatScript = Slogo;" );
@@ -169,23 +167,22 @@ print ("Stage 3: Exposure Esplanade is complete. Moving on to Stage 4: Burnbarre
 //Step 4. Burnbarrel Blvd.
 if ( contains_text( visit_url("clan_hobopolis.php?place=4") , "burnbarrelblvd11.gif") )
 	{
-    print ("Ol' Scratch is already defeated.", "orange") ;
+    	print ("Ol' Scratch is already defeated.", "orange") ;
 	}
 	else
 	{
 	if ( contains_text( visit_url("clan_hobopolis.php?place=4") , "burnbarrelblvd10.gif") )
 	{
-    print ("Ol' Scratch is already prepared.", "orange") ;
+   	 print ("Ol' Scratch is already prepared.", "orange") ;
 	}
 	else
 	{
 	//To Snapper Up for hobos and that sweet sweet cologne
-	if( have_familiar($familiar[Red-nosed snapper]) && my_familiar() != $familiar[Red-nosed Snapper] )
-		{
-		use_familiar($familiar[Red-nosed snapper]);
-		visit_url('familiar.php?action=guideme&pwd'); 
-		visit_url('choice.php?pwd&whichchoice=1396&option=1&cat=hobo');
-		}
+	    if( have_familiar($familiar[Red-nosed snapper]) && my_familiar() != $familiar[Red-nosed Snapper] ){
+        use_familiar($familiar[Red-nosed snapper]);}
+  	  if( my_familiar() == $familiar[Red-nosed Snapper] ){  
+        visit_url('familiar.php?action=guideme&pwd'); 
+        visit_url('choice.php?pwd&whichchoice=1396&option=1&cat=hobo');}
 	//Pre adventuring systems check...
 	set_property( "choiceAdventure206" , "2");	//Getting Tired: (Toss a Tire Gently (2) x34, violently (1) x1)x3
 	set_property( "choiceAdventure207" , "2");	//Hot Dog!: Walk Away
@@ -246,12 +243,11 @@ if ( contains_text( visit_url("clan_hobopolis.php?place=8") , "purplelightdistri
 	else
     {
     //To Snapper Up for hobos and that sweet sweet cologne
-    if( have_familiar($familiar[Red-nosed snapper]) && my_familiar() != $familiar[Red-nosed Snapper] )
-        {
-        use_familiar($familiar[Red-nosed snapper]);
+    if( have_familiar($familiar[Red-nosed snapper]) && my_familiar() != $familiar[Red-nosed Snapper] ){
+        use_familiar($familiar[Red-nosed snapper]);}
+    if( my_familiar() == $familiar[Red-nosed Snapper] ){  
         visit_url('familiar.php?action=guideme&pwd'); 
-        visit_url('choice.php?pwd&whichchoice=1396&option=1&cat=hobo');
-        }
+        visit_url('choice.php?pwd&whichchoice=1396&option=1&cat=hobo');}
     //Pre adventuring systems check...
 	set_property( "choiceAdventure219" , "2");	//The Furtive of my City: Intimidate Him (Move trash to the heap)
 	set_property( "choiceAdventure223" , "3");	//Getting Clubbed: Flimflam (3) x8, Try to get inside (1)
@@ -307,12 +303,11 @@ if ( contains_text( visit_url("clan_hobopolis.php?place=7") , "burialground11.gi
 	else
     {
     //To Snapper Up for hobos and that sweet sweet cologne
-    if( have_familiar($familiar[Red-nosed snapper]) && my_familiar() != $familiar[Red-nosed Snapper] )
-        {
-        use_familiar($familiar[Red-nosed snapper]);
+    if( have_familiar($familiar[Red-nosed snapper]) && my_familiar() != $familiar[Red-nosed Snapper] ){
+        use_familiar($familiar[Red-nosed snapper]);}
+    if( my_familiar() == $familiar[Red-nosed Snapper] ){  
         visit_url('familiar.php?action=guideme&pwd'); 
-        visit_url('choice.php?pwd&whichchoice=1396&option=1&cat=hobo');
-        }	
+        visit_url('choice.php?pwd&whichchoice=1396&option=1&cat=hobo');}
     //Pre adventuring systems check...
 	set_property( "choiceAdventure220" , "2");	//Returning to the tomb: Disturb not ye these bones (skip adventure)
 	set_property( "choiceAdventure208" , "2");	//Ah, so that's where they've gone: Tiptoe through the tulips (skip adventure)
@@ -362,12 +357,11 @@ if ( contains_text( visit_url("clan_hobopolis.php?place=6") , "theheap11.gif") )
 	else
     {
     //To Snapper Up for hobos and that sweet sweet cologne	
-    if( have_familiar($familiar[Red-nosed snapper]) && my_familiar() != $familiar[Red-nosed Snapper] )
-        {
-        use_familiar($familiar[Red-nosed snapper]);
+    if( have_familiar($familiar[Red-nosed snapper]) && my_familiar() != $familiar[Red-nosed Snapper] ){
+        use_familiar($familiar[Red-nosed snapper]);}
+    if( my_familiar() == $familiar[Red-nosed Snapper] ){  
         visit_url('familiar.php?action=guideme&pwd'); 
-        visit_url('choice.php?pwd&whichchoice=1396&option=1&cat=hobo');
-        }
+        visit_url('choice.php?pwd&whichchoice=1396&option=1&cat=hobo');}
     //Pre adventuring systems check...
 	set_property( "choiceAdventure218" , "1");	//I Refuse: Explore the Junkpile
 	set_property( "choiceAdventure216" , "2");	//The Compostal Service: Begone (Needs to be used (1) periodically though)
@@ -441,12 +435,11 @@ if ( contains_text( visit_url("clan_hobopolis.php?place=2") , "townsquare25o.gif
     else
     {
     //To Snapper Up for hobos and that sweet sweet cologne
-    if( have_familiar($familiar[Red-nosed snapper]) && my_familiar() != $familiar[Red-nosed Snapper] )
-        {
-        use_familiar($familiar[Red-nosed snapper]);
+    if( have_familiar($familiar[Red-nosed snapper]) && my_familiar() != $familiar[Red-nosed Snapper] ){
+        use_familiar($familiar[Red-nosed snapper]);}
+    if( my_familiar() == $familiar[Red-nosed Snapper] ){  
         visit_url('familiar.php?action=guideme&pwd'); 
-        visit_url('choice.php?pwd&whichchoice=1396&option=1&cat=hobo');
-        }
+        visit_url('choice.php?pwd&whichchoice=1396&option=1&cat=hobo');}
     //Pre adventuring systems check...
     cli_execute( "set customCombatScript = Slogo;" );
     set_property( "choiceAdventure272" , "2"); //No marketplace
