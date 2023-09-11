@@ -205,11 +205,11 @@ if ( contains_text( visit_url("clan_hobopolis.php?place=4") , "burnbarrelblvd11.
 		set_property( "choiceAdventure206" , "2");	
 	if (contains_text( visit_url("clan_raidlogs.php") , my_id() + ") threw 68 tires on the fire (68 turns)"))
 		set_property( "choiceAdventure206" , "1");
-	if (contains_text( visit_url("clan_raidlogs.php") , my_id() + ") started 2 tirevalanche (2 turns)"))
+	if (contains_text( visit_url("clan_raidlogs.php") , my_id() + ") started 2 tirevalanches (2 turns)"))
 		set_property( "choiceAdventure206" , "2");					
 	if (contains_text( visit_url("clan_raidlogs.php") , my_id() + ") threw 102 tires on the fire (102 turns)"))
 		set_property( "choiceAdventure206" , "1");
-	if (contains_text( visit_url("clan_raidlogs.php") , my_id() + ") started 3 tirevalanche (3 turns)"))
+	if (contains_text( visit_url("clan_raidlogs.php") , my_id() + ") started 3 tirevalanches (3 turns)"))
 		set_property( "choiceAdventure206" , "2");			
 	adventure(1, $location[Burnbarrel Blvd.]) ;	
 	if (my_adventures() == 0)
