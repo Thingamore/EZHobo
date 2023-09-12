@@ -218,7 +218,7 @@ if ( contains_text( visit_url("clan_hobopolis.php?place=4") , "burnbarrelblvd11.
 	}
 	} until ((last_choice() == 201));
 
-	if (last_choice() == 202)
+	if (last_choice() == 201)
 	{
 		cli_execute( "mood apathetic" );
 		set_auto_attack(0);
