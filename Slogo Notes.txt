@@ -27,7 +27,7 @@ Required Things
         - Can of Mixed everything 
         - Jurassic Parka
 
-2. Moods: //Maybe switch out for Gain functions? 
+2. Moods:
 
 [ eenc ] //NC to ~30%, thorns damage for underkilling hobos
 lose_effect eviscerate! => use 1 wind-up whatsian robot
@@ -65,9 +65,4 @@ lose_effect the sonata of sneakiness => cast 1 the sonata of sneakiness
 Optional Things: 
 
 1. Familiar Snapper
-2. Lucky Gold Ring
-3. Mafia Thumb Ring
-4. Carnivorous Potted Plant
-5. Mr. Cheeng's spectacles
-6. Can of Mixed everything 
-7. Jurassic Parka
+2. Familiar Disgeist
