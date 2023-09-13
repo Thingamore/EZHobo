@@ -22,7 +22,7 @@ if ( contains_text( visit_url("clan_hobopolis.php?place=2") , "clan_hobopolis.ph
 
     //Pre adventuring checks...
     cli_execute( "mood apathetic" ); //Safety check      
-    maximize("item drop, -equip broken champagne bottle, 0.6 bonus Li'l Businessman Kit, 0.8 bonus lucky gold ring, 0.4 bonus mafia thumb ring, 0.2 bonus carnivorous potted plant, 0.3 bonus mr. cheeng's spectacles", false);
+    maximize("item drop, -equip broken champagne bottle, equip Li'l Businessman Kit, equip lucky gold ring, equip mafia thumb ring, equip carnivorous potted plant, equip mr. cheeng's spectacles", false);
     cli_execute( "set customCombatScript = Slogo;" ); //Hobo CCS
     set_auto_attack(0); //Safety check
 
@@ -45,7 +45,7 @@ print ("Stage 1: A Maze Of Sewer Tunnels is complete. Moving on to Stage 2: Town
 //abort ( "Testing."); //For Testing
 
 //Step 2: Town Square part 1
-if ( contains_text( visit_url("clan_hobopolis.php?place=2") , "clan_hobopolis.php?place=8") )
+if ( contains_text( visit_url("clan_hobopolis.php?place=2") , "clan_hobopolis.php?place=5") )
     {
     print ("Side areas are already unlocked.", "orange") ;
     }
@@ -56,7 +56,7 @@ if ( contains_text( visit_url("clan_hobopolis.php?place=2") , "clan_hobopolis.ph
         use_familiar($familiar[Red-nosed snapper]);}
     if( my_familiar() == $familiar[Red-nosed Snapper] ){  
         visit_url('familiar.php?action=guideme&pwd'); 
-        visit_url('choice.php?pwd&whichchoice=1396&option=1&cat=hobo');}
+        visit_url('choice.php?pwd&whichchoice=1396&option=1&cat=hobo');} 
     //Pre adventuring systems check...
     cli_execute( "set customCombatScript = Slogo;" );
     set_property( "choiceAdventure272" , "2"); //No marketplace
@@ -64,7 +64,7 @@ if ( contains_text( visit_url("clan_hobopolis.php?place=2") , "clan_hobopolis.ph
     repeat
     {
     set_auto_attack(0);
-    maximize("spell dmg, -equip witch's bra, 0.6 bonus Li'l Businessman Kit, 0.8 bonus lucky gold ring, 0.4 bonus mafia thumb ring, 0.3 bonus cheeng's spectacles, 0.2 bonus can of mixed everything", false);
+    maximize("spell dmg, -equip witch's bra, equip Li'l Businessman Kit, equip lucky gold ring, equip mafia thumb ring, equip cheeng's spectacles, equip can of mixed everything", false);
     use_skill($skill[Spirit of Cayenne]); //Hot
     adventure($location[Hobopolis Town Square], 1);
     use_skill($skill[Spirit of Peppermint]); //Cold
@@ -75,7 +75,7 @@ if ( contains_text( visit_url("clan_hobopolis.php?place=2") , "clan_hobopolis.ph
     adventure($location[Hobopolis Town Square], 1);
     use_skill($skill[Spirit of Bacon Grease]); //Sleaze
     adventure($location[Hobopolis Town Square], 1);
-    maximize("weapon dmg, 0.6 bonus Li'l Businessman Kit, 0.8 bonus lucky gold ring, 0.4 bonus mafia thumb ring, 0.3 bonus cheeng's spectacles, 0.2 bonus can of mixed everything", false);
+    maximize("weapon dmg, equip Li'l Businessman Kit, equip lucky gold ring, equip mafia thumb ring, equip cheeng's spectacles, equip bonus can of mixed everything", false);
     use_skill($skill[Spirit of Nothing]); //Nothing
     set_auto_attack("Lunging Thrust-Smack");
     adventure($location[Hobopolis Town Square], 1);
@@ -100,7 +100,7 @@ if ( contains_text( visit_url("clan_hobopolis.php?place=2") , "clan_hobopolis.ph
     } until (my_adventures() == 0); //If PLD is not open, make scobos until either img11 appears or adv = 0. Easy enough.
     }
 print ("Stage 2: Town Square Part 1 is complete. Moving on to Stage 3: Exposure Esplanade.", "orange");
-//abort ( "Testing."); //For Testing
+abort ( "Testing."); //For Testing
 
 //Step 3. Exposure Esplanade.
 if ( contains_text( visit_url("clan_hobopolis.php?place=5") , "exposureesplanade11.gif") )
@@ -120,9 +120,9 @@ if ( contains_text( visit_url("clan_hobopolis.php?place=5") , "exposureesplanade
         use_familiar($familiar[Red-nosed snapper]);}
     if( my_familiar() == $familiar[Red-nosed Snapper] ){  
         visit_url('familiar.php?action=guideme&pwd'); 
-        visit_url('choice.php?pwd&whichchoice=1396&option=1&cat=hobo');}
+        visit_url('choice.php?pwd&whichchoice=1396&option=1&cat=hobo');} 
     //Pre adventuring systems check...
-    maximize("-combat 25 min, 0.9 bonus Jurassic Parka, 0.6 bonus Li'l Businessman Kit, 0.8 bonus lucky gold ring, 0.4 bonus mafia thumb ring, 0.3 bonus cheeng's spectacles, 0.2 bonus carnivorous potted plant", false);
+    maximize("-combat 25 min, equip Jurassic Parka, equip Li'l Businessman Kit, equip lucky gold ring, equip mafia thumb ring, equip cheeng's spectacles, equip carnivorous potted plant", false);
     cli_execute( "set customCombatScript = Slogo;" );
     cli_execute( "parka hot" ); //NC Boost
     cli_execute( "mood eenc" ); //Boosts NC and passive damage
@@ -167,28 +167,28 @@ print ("Stage 3: Exposure Esplanade is complete. Moving on to Stage 4: Burnbarre
 //Step 4. Burnbarrel Blvd.
 if ( contains_text( visit_url("clan_hobopolis.php?place=4") , "burnbarrelblvd11.gif") )
 	{
-    	print ("Ol' Scratch is already defeated.", "orange") ;
+    print ("Ol' Scratch is already defeated.", "orange") ;
 	}
 	else
 	{
 	if ( contains_text( visit_url("clan_hobopolis.php?place=4") , "burnbarrelblvd10.gif") )
 	{
-   	 print ("Ol' Scratch is already prepared.", "orange") ;
+    print ("Ol' Scratch is already prepared.", "orange") ;
 	}
 	else
 	{
 	//To Snapper Up for hobos and that sweet sweet cologne
-	    if( have_familiar($familiar[Red-nosed snapper]) && my_familiar() != $familiar[Red-nosed Snapper] ){
+    if( have_familiar($familiar[Red-nosed snapper]) && my_familiar() != $familiar[Red-nosed Snapper] ){
         use_familiar($familiar[Red-nosed snapper]);}
-  	  if( my_familiar() == $familiar[Red-nosed Snapper] ){  
+    if( my_familiar() == $familiar[Red-nosed Snapper] ){  
         visit_url('familiar.php?action=guideme&pwd'); 
-        visit_url('choice.php?pwd&whichchoice=1396&option=1&cat=hobo');}
+        visit_url('choice.php?pwd&whichchoice=1396&option=1&cat=hobo');} 
 	//Pre adventuring systems check...
 	set_property( "choiceAdventure206" , "2");	//Getting Tired: (Toss a Tire Gently (2) x34, violently (1) x1)x3
 	set_property( "choiceAdventure207" , "2");	//Hot Dog!: Walk Away
 	set_property( "choiceAdventure213" , "2");	//Piping Hot: Leave the valve alone
 	set_property( "choiceAdventure201" , "2");	//Home in the Range: Leave combat with Ol' Scratch (0 will show in browser)
-	maximize("-combat 25 min, 0.9 bonus Jurassic Parka, 0.6 bonus Li'l Businessman Kit, 0.8 bonus lucky gold ring, 0.4 bonus mafia thumb ring, 0.3 bonus cheeng's spectacles, 0.2 bonus carnivorous potted plant", false);
+	maximize("-combat, equip jurassic Parka, equip Li'l Businessman Kit, equip lucky gold ring, equip mafia thumb ring, equip cheeng's spectacles, equip bonus carnivorous potted plant", false);
 	cli_execute( "set customCombatScript = Slogo;" );
 	cli_execute( "parka hot" );
 	cli_execute( "mood nc" );
@@ -218,7 +218,7 @@ if ( contains_text( visit_url("clan_hobopolis.php?place=4") , "burnbarrelblvd11.
 	}
 	} until ((last_choice() == 201));
 
-	if (last_choice() == 201)
+	if (last_choice() == 202)
 	{
 		cli_execute( "mood apathetic" );
 		set_auto_attack(0);
@@ -247,13 +247,13 @@ if ( contains_text( visit_url("clan_hobopolis.php?place=8") , "purplelightdistri
         use_familiar($familiar[Red-nosed snapper]);}
     if( my_familiar() == $familiar[Red-nosed Snapper] ){  
         visit_url('familiar.php?action=guideme&pwd'); 
-        visit_url('choice.php?pwd&whichchoice=1396&option=1&cat=hobo');}
+        visit_url('choice.php?pwd&whichchoice=1396&option=1&cat=hobo');} 
     //Pre adventuring systems check...
 	set_property( "choiceAdventure219" , "2");	//The Furtive of my City: Intimidate Him (Move trash to the heap)
 	set_property( "choiceAdventure223" , "3");	//Getting Clubbed: Flimflam (3) x8, Try to get inside (1)
 	set_property( "choiceAdventure224" , "2");	//Kills 10% remaining sleaze hobos
 	set_property( "choiceAdventure205" , "2");	//Van, Damn: Leave combat with Chester
-	maximize("+combat, 0.9 bonus Jurassic Parka, 0.6 bonus Li'l Businessman Kit, 0.8 bonus lucky gold ring, 0.4 bonus mafia thumb ring, 0.3 bonus cheeng's spectacles, 0.2 bonus carnivorous potted plant", false);
+	maximize("+combat, 0.9 bonus jurassic Parka, 0.6 bonus Li'l Businessman Kit, 0.8 bonus lucky gold ring, 0.4 bonus mafia thumb ring, 0.3 bonus cheeng's spectacles, 0.2 bonus carnivorous potted plant", false);
 	cli_execute( "set customCombatScript = Slogo;" );
 	cli_execute( "parka sleaze" );
 	cli_execute( "remedy smooth movements, the sonata of sneakiness, patent invisibility" );
@@ -307,14 +307,14 @@ if ( contains_text( visit_url("clan_hobopolis.php?place=7") , "burialground11.gi
         use_familiar($familiar[Red-nosed snapper]);}
     if( my_familiar() == $familiar[Red-nosed Snapper] ){  
         visit_url('familiar.php?action=guideme&pwd'); 
-        visit_url('choice.php?pwd&whichchoice=1396&option=1&cat=hobo');}
+        visit_url('choice.php?pwd&whichchoice=1396&option=1&cat=hobo');} 	
     //Pre adventuring systems check...
 	set_property( "choiceAdventure220" , "2");	//Returning to the tomb: Disturb not ye these bones (skip adventure)
 	set_property( "choiceAdventure208" , "2");	//Ah, so that's where they've gone: Tiptoe through the tulips (skip adventure)
 	set_property( "choiceAdventure221" , "1");	//A Chiller Night (1): Study the hobos' dance moves, then dance with them
 	set_property( "choiceAdventure222" , "1");	//A Chiller Night: Dance with them x23
 	set_property( "choiceAdventure204" , "2");	//Welcome to You: Leave combat with Zombo (0 will show in browser)
-	maximize("-combat 25 min, 0.9 bonus Jurassic Parka, 0.6 bonus Li'l Businessman Kit, 0.8 bonus lucky gold ring, 0.4 bonus mafia thumb ring, 0.3 bonus cheeng's spectacles, 0.2 bonus carnivorous potted plant", false);
+	maximize("-combat, equip jurassic Parka, equip Li'l Businessman Kit, equip lucky gold ring, equip mafia thumb ring, equip cheeng's spectacles, equip bonus carnivorous potted plant", false);
 	cli_execute( "set customCombatScript = Slogo;" );
 	cli_execute( "parka hot" ); //NC boost
 	cli_execute( "remedy carlweather's cantata, everything must go, high colognic, lion in ambush, musk of the moose" );
@@ -361,13 +361,13 @@ if ( contains_text( visit_url("clan_hobopolis.php?place=6") , "theheap11.gif") )
         use_familiar($familiar[Red-nosed snapper]);}
     if( my_familiar() == $familiar[Red-nosed Snapper] ){  
         visit_url('familiar.php?action=guideme&pwd'); 
-        visit_url('choice.php?pwd&whichchoice=1396&option=1&cat=hobo');}
+        visit_url('choice.php?pwd&whichchoice=1396&option=1&cat=hobo');} 
     //Pre adventuring systems check...
 	set_property( "choiceAdventure218" , "1");	//I Refuse: Explore the Junkpile
 	set_property( "choiceAdventure216" , "2");	//The Compostal Service: Begone (Needs to be used (1) periodically though)
 	set_property( "choiceAdventure214" , "1");	//You vs. The Volcano: Kick Stuff into the Hole
 	set_property( "choiceAdventure203" , "2");	//Deep Enough to Dive: Leave combat with Oscus (0 will show in browser)
-	maximize("-combat 25 min, 0.9 bonus Jurassic Parka, 0.6 bonus Li'l Businessman Kit, 0.8 bonus lucky gold ring, 0.4 bonus mafia thumb ring, 0.3 bonus cheeng's spectacles, 0.2 bonus carnivorous potted plant", false);
+	maximize("-combat, equip jurassic Parka, equip Li'l Businessman Kit, equip lucky gold ring, equip mafia thumb ring, equip cheeng's spectacles, equip bonus carnivorous potted plant", false);
 	cli_execute( "set customCombatScript = Slogo;" );
 	cli_execute( "parka hot" ); //NC Boost
 	cli_execute( "mood nc" );
@@ -439,14 +439,14 @@ if ( contains_text( visit_url("clan_hobopolis.php?place=2") , "townsquare25o.gif
         use_familiar($familiar[Red-nosed snapper]);}
     if( my_familiar() == $familiar[Red-nosed Snapper] ){  
         visit_url('familiar.php?action=guideme&pwd'); 
-        visit_url('choice.php?pwd&whichchoice=1396&option=1&cat=hobo');}
+        visit_url('choice.php?pwd&whichchoice=1396&option=1&cat=hobo');} 
     //Pre adventuring systems check...
     cli_execute( "set customCombatScript = Slogo;" );
     set_property( "choiceAdventure272" , "2"); //No marketplace
     //Starting our adventuring loop.
     repeat
     {     
-    maximize("spell dmg, -equip witch's bra, 0.6 bonus Li'l Businessman Kit, 0.8 bonus lucky gold ring, 0.4 bonus mafia thumb ring, 0.3 bonus cheeng's spectacles, 0.2 bonus can of mixed everything", false);       	
+    maximize("spell dmg, -equip witch's bra, equip Li'l Businessman Kit, equip lucky gold ring, equip mafia thumb ring, equip cheeng's spectacles, equip can of mixed everything", false);       	
     set_auto_attack(0);
     use_skill($skill[Spirit of Cayenne]); //Hot
     adventure($location[Hobopolis Town Square], 1);
@@ -459,7 +459,7 @@ if ( contains_text( visit_url("clan_hobopolis.php?place=2") , "townsquare25o.gif
     use_skill($skill[Spirit of Bacon Grease]); //Sleaze
     adventure($location[Hobopolis Town Square], 1);
     use_skill($skill[Spirit of Nothing]); //Nothing
-    maximize("weapon dmg, 0.6 bonus Li'l Businessman Kit, 0.8 bonus lucky gold ring, 0.4 bonus mafia thumb ring, 0.3 bonus cheeng's spectacles, 0.2 bonus can of mixed everything", false);
+    maximize("weapon dmg, equip Li'l Businessman Kit, equip lucky gold ring, equip mafia thumb ring, equip cheeng's spectacles, equip can of mixed everything", false);
     set_auto_attack("Lunging Thrust-Smack");
     adventure($location[Hobopolis Town Square], 1);
     visit_url("clan_hobopolis.php?place=3&action=talkrichard&whichtalk=3&preaction=simulacrum&qty=1"); //Richard for scobo
