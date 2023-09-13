@@ -18,7 +18,7 @@ Required Things
         - Saucegeyser
         - Flavor of Magic
     b. Equipment pieces:
-        - Miniborg Stomper
+        - Tin Snips x2
         - Porquoise Sixgun
         - Lucky Gold Ring
         - Mafia Thumb Ring
@@ -33,20 +33,22 @@ Required Things
     lose_effect fangs and pangs => use 1 wind-up vampire teeth
     lose_effect gummi badass => use 1 gummi fang
     lose_effect it's electric! => use 1 eel battery
-    lose_effect jalape&ntilde;o saucesphere => cast 1 jalape&ntilde;o saucesphere
     lose_effect little mouse skull buddy => use 1 mouse skull
     lose_effect mayeaugh => use 1 glob of spoiled mayo
     lose_effect permanent halloween => use 1 spooky sound effects record
-    lose_effect psalm of pointiness => cast 1 the psalm of pointiness
     lose_effect pygmy drinking buddy => use 1 pygmy phone number
     lose_effect skeletal cleric => skeleton cleric
     lose_effect skeletal warrior => skeleton warrior
     lose_effect skeletal wizard => skeleton wizard
     lose_effect smokin' => use 1 cheap cigar butt
-    lose_effect smooth movements => cast 1 smooth movement
     lose_effect spiky frozen hair => use 1 frozen shampoo-conditioner
-    lose_effect spiky shell => cast 1 spiky shell
-    lose_effect the sonata of sneakiness => cast 1 the sonata of sneakiness
+    
+	lose_effect spiky shell => cast 1 spiky shell
+	lose_effect jalape&ntilde;o saucesphere => cast 1 jalape&ntilde;o saucesphere
+	lose_effect psalm of pointiness => cast 1 the psalm of pointiness
+	
+    lose_effect smooth movements => cast 1 smooth movement
+	lose_effect the sonata of sneakiness => cast 1 the sonata of sneakiness
 
     [ nc ] //Boost NC in ahbg, the heap, bb
     lose_effect cletus's canticle of celerity => cast 1 cletus's canticle of celerity
