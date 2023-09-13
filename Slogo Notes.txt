@@ -19,7 +19,7 @@ Required Things
         - Flavor of Magic
     b. Equipment pieces:
         - Tin Snips x2
-        - Porquoise Sixgun
+
         - Lucky Gold Ring
         - Mafia Thumb Ring
         - Carnivorous Potted Plant
