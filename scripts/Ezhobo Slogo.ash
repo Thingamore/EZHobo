@@ -1,6 +1,8 @@
 print ("Beginning your journey into Hobopolis starting with Stage 1: The Maze of Sewer Tunnels.", "orange");
+cli_execute( "set hpAutoRecovery=0.25;" );
+cli_execute( "set mpAutoRecovery=0.25;" );
 
-//Step 1: A Maze of Sewer Tunnels
+//Step 1: A Maze of Sewer Tunnels; spends 100 turns beating up sewer momsnters to get Sewer test items.
 if ( contains_text( visit_url("clan_hobopolis.php?place=2") , "clan_hobopolis.php?place=3") ) 
     {
     print ("The Maze of Sewer Tunnels is already clear.", "orange") ; //If Richard's Redout is available, Sewer Maze has been complete.
@@ -44,7 +46,7 @@ if ( contains_text( visit_url("clan_hobopolis.php?place=2") , "clan_hobopolis.ph
 print ("Stage 1: A Maze Of Sewer Tunnels is complete. Moving on to Stage 2: Town Square Part 1", "orange");
 //abort ( "Testing."); //For Testing
 
-//Step 2: Town Square part 1
+//Step 2: Town Square part 1; scobos until all of the side areas are open.
 if ( contains_text( visit_url("clan_hobopolis.php?place=2") , "clan_hobopolis.php?place=8") )
     {
     print ("Side areas are already unlocked.", "orange") ;
@@ -102,7 +104,7 @@ if ( contains_text( visit_url("clan_hobopolis.php?place=2") , "clan_hobopolis.ph
 print ("Stage 2: Town Square Part 1 is complete. Moving on to Stage 3: Exposure Esplanade.", "orange");
 //abort ( "Testing."); //For Testing
 
-//Step 3. Exposure Esplanade.
+//Step 3. Exposure Esplanade; breaks 105 pipes, diverts water 13x, and then makes a big yodel. Ideally.
 if ( contains_text( visit_url("clan_hobopolis.php?place=5") , "exposureesplanade11.gif") )
 	{
 	print ("Frosty is already prepared.", "orange") ;
@@ -164,7 +166,7 @@ if ( contains_text( visit_url("clan_hobopolis.php?place=5") , "exposureesplanade
 print ("Stage 3: Exposure Esplanade is complete. Moving on to Stage 4: Burnbarrel Boulevard.", "orange");
 //abort ( "Testing."); //For Testing
 
-//Step 4. Burnbarrel Blvd.
+//Step 4. Burnbarrel Blvd; kills hot hobos while making three stacks of 34 tires and knocking them down.
 if ( contains_text( visit_url("clan_hobopolis.php?place=4") , "burnbarrelblvd11.gif") )
 	{
     print ("Ol' Scratch is already defeated.", "orange") ;
@@ -218,7 +220,7 @@ if ( contains_text( visit_url("clan_hobopolis.php?place=4") , "burnbarrelblvd11.
 	}
 	} until ((last_choice() == 201));
 
-	if (last_choice() == 202)
+	if (last_choice() == 201)
 	{
 		cli_execute( "mood apathetic" );
 		set_auto_attack(0);
@@ -229,7 +231,7 @@ if ( contains_text( visit_url("clan_hobopolis.php?place=4") , "burnbarrelblvd11.
 print ("Stage 4: Burnbarrel Boulevard is now complete. Moving on to Stage 5: The Purple Light District.", "orange");
 //abort ( "Testing."); //For Testing
 
-//Step 5. The Purple Light District
+//Step 5. The Purple Light District; flimflam 8 times for A Chiller Night in AHBG and then clubs more sleaze hobos until clear.
 if ( contains_text( visit_url("clan_hobopolis.php?place=8") , "purplelightdistrict11.gif") )
 	{
     print ("Chester is already defeated.", "orange") ;
@@ -314,7 +316,7 @@ if ( contains_text( visit_url("clan_hobopolis.php?place=7") , "burialground11.gi
 	set_property( "choiceAdventure221" , "1");	//A Chiller Night (1): Study the hobos' dance moves, then dance with them
 	set_property( "choiceAdventure222" , "1");	//A Chiller Night: Dance with them x23
 	set_property( "choiceAdventure204" , "2");	//Welcome to You: Leave combat with Zombo (0 will show in browser)
-	maximize("-combat, equip jurassic Parka, equip Li'l Businessman Kit, equip lucky gold ring, equip mafia thumb ring, equip cheeng's spectacles, equip bonus carnivorous potted plant", false);
+	maximize("-combat, equip jurassic Parka, equip Li'l Businessman Kit, equip lucky gold ring, equip mafia thumb ring, equip cheeng's spectacles, equip carnivorous potted plant", false);
 	cli_execute( "set customCombatScript = Slogo;" );
 	cli_execute( "parka hot" ); //NC boost
 	cli_execute( "remedy carlweather's cantata, everything must go, high colognic, lion in ambush, musk of the moose" );
@@ -332,7 +334,7 @@ if ( contains_text( visit_url("clan_hobopolis.php?place=7") , "burialground11.gi
     }
 	} until ((last_choice() == 204));
 	
-	if (last_choice() == 205)
+	if (last_choice() == 204)
     {
         cli_execute( "mood apathetic" );
         set_auto_attack(0);
@@ -367,7 +369,7 @@ if ( contains_text( visit_url("clan_hobopolis.php?place=6") , "theheap11.gif") )
 	set_property( "choiceAdventure216" , "2");	//The Compostal Service: Begone (Needs to be used (1) periodically though)
 	set_property( "choiceAdventure214" , "1");	//You vs. The Volcano: Kick Stuff into the Hole
 	set_property( "choiceAdventure203" , "2");	//Deep Enough to Dive: Leave combat with Oscus (0 will show in browser)
-	maximize("-combat, equip jurassic Parka, equip Li'l Businessman Kit, equip lucky gold ring, equip mafia thumb ring, equip cheeng's spectacles, equip bonus carnivorous potted plant", false);
+	maximize("-combat, equip jurassic Parka, equip Li'l Businessman Kit, equip lucky gold ring, equip mafia thumb ring, equip cheeng's spectacles, equip carnivorous potted plant", false);
 	cli_execute( "set customCombatScript = Slogo;" );
 	cli_execute( "parka hot" ); //NC Boost
 	cli_execute( "mood nc" );
@@ -484,5 +486,3 @@ if ( contains_text( visit_url("clan_hobopolis.php?place=2") , "townsquare25o.gif
     }
 print ("Stage 8: Town Square Part 2 is complete. It is probably time to kill some bosses.", "orange");
 //abort ( "Testing."); //For Testing
-
-
