@@ -35,7 +35,6 @@ lose_effect fangs and pangs => use 1 wind-up vampire teeth
 lose_effect it's electric! => use 1 eel battery
 lose_effect little mouse skull buddy => use 1 mouse skull
 lose_effect mayeaugh => use 1 glob of spoiled mayo
-lose_effect permanent halloween => use 1 spooky sound effects record
 lose_effect pygmy drinking buddy => use 1 pygmy phone number
 lose_effect skeletal cleric => skeleton cleric
 lose_effect skeletal warrior => skeleton warrior
