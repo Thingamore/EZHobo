@@ -75,7 +75,7 @@ if ( contains_text( visit_url("clan_hobopolis.php?place=2") , "clan_hobopolis.ph
     adventure($location[Hobopolis Town Square], 1);
     use_skill($skill[Spirit of Bacon Grease]); //Sleaze
     adventure($location[Hobopolis Town Square], 1);
-    maximize("weapon dmg, equip Li'l Businessman Kit, equip lucky gold ring, equip mafia thumb ring, equip cheeng's spectacles, equip bonus can of mixed everything", false);
+    maximize("weapon dmg, equip Li'l Businessman Kit, equip lucky gold ring, equip mafia thumb ring, equip cheeng's spectacles, equip can of mixed everything", false);
     use_skill($skill[Spirit of Nothing]); //Nothing
     set_auto_attack("Lunging Thrust-Smack");
     adventure($location[Hobopolis Town Square], 1);
@@ -188,7 +188,7 @@ if ( contains_text( visit_url("clan_hobopolis.php?place=4") , "burnbarrelblvd11.
 	set_property( "choiceAdventure207" , "2");	//Hot Dog!: Walk Away
 	set_property( "choiceAdventure213" , "2");	//Piping Hot: Leave the valve alone
 	set_property( "choiceAdventure201" , "2");	//Home in the Range: Leave combat with Ol' Scratch (0 will show in browser)
-	maximize("-combat, equip jurassic Parka, equip Li'l Businessman Kit, equip lucky gold ring, equip mafia thumb ring, equip cheeng's spectacles, equip bonus carnivorous potted plant", false);
+	maximize("-combat, equip jurassic Parka, equip Li'l Businessman Kit, equip lucky gold ring, equip mafia thumb ring, equip cheeng's spectacles, equip carnivorous potted plant", false);
 	cli_execute( "set customCombatScript = Slogo;" );
 	cli_execute( "parka hot" );
 	cli_execute( "mood nc" );
@@ -253,7 +253,7 @@ if ( contains_text( visit_url("clan_hobopolis.php?place=8") , "purplelightdistri
 	set_property( "choiceAdventure223" , "3");	//Getting Clubbed: Flimflam (3) x8, Try to get inside (1)
 	set_property( "choiceAdventure224" , "2");	//Kills 10% remaining sleaze hobos
 	set_property( "choiceAdventure205" , "2");	//Van, Damn: Leave combat with Chester
-	maximize("+combat, 0.9 bonus jurassic Parka, 0.6 bonus Li'l Businessman Kit, 0.8 bonus lucky gold ring, 0.4 bonus mafia thumb ring, 0.3 bonus cheeng's spectacles, 0.2 bonus carnivorous potted plant", false);
+	maximize("+combat, equip jurassic Parka, equip Li'l Businessman Kit, equip lucky gold ring, equip mafia thumb ring, equip cheeng's spectacles, equip carnivorous potted plant", false);
 	cli_execute( "set customCombatScript = Slogo;" );
 	cli_execute( "parka sleaze" );
 	cli_execute( "remedy smooth movements, the sonata of sneakiness, patent invisibility" );
