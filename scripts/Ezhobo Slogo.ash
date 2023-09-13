@@ -100,7 +100,7 @@ if ( contains_text( visit_url("clan_hobopolis.php?place=2") , "clan_hobopolis.ph
     } until (my_adventures() == 0); //If PLD is not open, make scobos until either img11 appears or adv = 0. Easy enough.
     }
 print ("Stage 2: Town Square Part 1 is complete. Moving on to Stage 3: Exposure Esplanade.", "orange");
-abort ( "Testing."); //For Testing
+//abort ( "Testing."); //For Testing
 
 //Step 3. Exposure Esplanade.
 if ( contains_text( visit_url("clan_hobopolis.php?place=5") , "exposureesplanade11.gif") )
