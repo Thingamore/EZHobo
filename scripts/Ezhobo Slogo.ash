@@ -45,7 +45,7 @@ print ("Stage 1: A Maze Of Sewer Tunnels is complete. Moving on to Stage 2: Town
 //abort ( "Testing."); //For Testing
 
 //Step 2: Town Square part 1
-if ( contains_text( visit_url("clan_hobopolis.php?place=2") , "clan_hobopolis.php?place=5") )
+if ( contains_text( visit_url("clan_hobopolis.php?place=2") , "clan_hobopolis.php?place=8") )
     {
     print ("Side areas are already unlocked.", "orange") ;
     }
