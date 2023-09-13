@@ -20,6 +20,12 @@ Required Things
     b. Equipment pieces:
         - Miniborg Stomper
         - Porquoise Sixgun
+        - Lucky Gold Ring
+        - Mafia Thumb Ring
+        - Carnivorous Potted Plant
+        - Mr. Cheeng's spectacles
+        - Can of Mixed everything 
+        - Jurassic Parka
 
 2. Moods: //Maybe switch out for Gain functions? 
     [ eenc ] //NC to ~30%, thorns damage for underkilling hobos
