@@ -51,7 +51,6 @@ lose_effect the sonata of sneakiness => cast 1 the sonata of sneakiness
     lose_effect cletus's canticle of celerity => cast 1 cletus's canticle of celerity
     lose_effect feeling sneaky => use 1 trampled ticket stub
     lose_effect fresh scent => use either 1 chunk of rock salt, 1 deodorant
-    lose_effect shortly buttered => use 1 short stick of butter
     lose_effect smooth movements => cast 1 smooth movement
     lose_effect the sonata of sneakiness => cast 1 the sonata of sneakiness
 
