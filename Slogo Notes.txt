@@ -30,7 +30,6 @@ Required Things
 2. Moods:
 
 [ eenc ] //NC to ~30%, thorns damage for underkilling hobos
-lose_effect eviscerate! => use 1 wind-up whatsian robot
 lose_effect fangs and pangs => use 1 wind-up vampire teeth
 lose_effect it's electric! => use 1 eel battery
 lose_effect little mouse skull buddy => use 1 mouse skull
