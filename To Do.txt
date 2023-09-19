@@ -1,5 +1,24 @@
-To Do:
-- Rework EE logic based on latest lessons learned for 'stick' and 'coat'
-- Add PLD Support for `stick`
-- Add The Heap support for `stick`
-- Heard mutterings of ezhobo_combat having issue, not sure if still a thing
+To Do
+- Determine routing for EE/BB in Stick and Coat runs
+- Incorporate Slogo into Ezhobo
+- Hamster magic?
+- Add a full write up of how to use ezhobo and its various functions to the README
+
+- Current Goals
+
+Ezhobo Sewers 
+//Literally just clear the sewers, minimize turns.
+
+Ezhobo Slogo [###] 
+//Clear the full instance, meant to be for farming over turns and/or boss drops for the mASSes. Incur minimal cost. Would also like to make it so the number of turns is optional/use all turns when left blank. Currently written as a second script, need to figure out how to mesh into Ezhobo proper, fine tune/improve.
+
+Ezhobo Stick [###]
+//As I am unable to fully comprehend Jimmy's magic, I am not sure of the status of this. End goal is for stick to effectively spend adventurer's turns to get Hodgman's Whacking Stick. 
+Routing: Sewer Maze (with grates and valves -> sewer tests as fitting), Scobo to Side areas open, EE part 1 [X runners bursting pipes until Y icicles are made], BB, PLD, The Heap, Scobo to Hodge, EE part 2 [Big Yodels]
+
+Ezhobo Coat [###]
+//As I am unable to fully comprehend Jimmy's magic, I am not sure of the status of this. End goal is for stick to effectively spend adventurer's turns to get Hodgman's Overcoat.
+Routing: Sewer Maze (with grates and valves -> sewer tests as fitting), Scobo to Hodge, if turns allow then proceed to EE and BB with free runs/cleeshkills
+
+Ezhobo Hamster [###]
+//As I am unable to fully comprehend Jimmy's magic, this is a dream of demonic arts. Potential routin gwould be to speed through the sewers, scobo until the tent is open, mosh in the NC, and repeat this process. Requires 7 runners and coordination, but is feasible to be scripted.
