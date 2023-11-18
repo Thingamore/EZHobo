@@ -36,6 +36,11 @@ if ( contains_text( visit_url("clan_hobopolis.php?place=2") , "clan_hobopolis.ph
             print ("You have ran out of adventures in the Maze of Sewers Tunnels.", "orange");
             exit;
             }
+        if (my_adventures() < 10)
+            {
+            print ("You do not have enough adventures to enter the Maze of Sewer Tunnels.", "orange");
+            exit;
+            }
         adventure(1, $location[a maze of sewer tunnels]);
         } //We either hit At Last or run out of adventures.    
     print("You have cleared the Maze of Sewer Tunnels.", "orange");
