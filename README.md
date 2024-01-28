@@ -2,7 +2,7 @@
 Welcome to Ezhobo, your one stop shop for all things Hobopolis automation scripting and the basis of the Ascension Speed Society's Feeding (on) the Homeless Initiative.
 
 ## Installation:
-`git checkout https://github.com/Thingamore/EZHobo.git`
+`git checkout https://github.com/Infopowerbroker/EZHobo.git`
 
 
 ## Requirements:
