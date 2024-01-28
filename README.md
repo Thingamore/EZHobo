@@ -1,6 +1,9 @@
 # EZHobo
 Welcome to Ezhobo, your one stop shop for all things Hobopolis automation scripting and the basis of the Ascension Speed Society's Feeding (on) the Homeless Initiative.
 
+## Note:
+This is a fork of Thingamore's script, attempting to fix a weird behavior in Shadow Rift CCS. 
+
 ## Installation:
 `git checkout https://github.com/Infopowerbroker/EZHobo.git`
 
