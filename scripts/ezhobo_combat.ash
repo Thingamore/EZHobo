@@ -28,7 +28,7 @@ string hobo_combat(int round, monster mon_encountered, string pagetext) {
 
 
  // Check for non-hobo zones. (e.g YRs from parka)
- if(my_location() == $location[Shadow Rift] || my_location() == $location[Thugnderdome]){
+ if(substring(my_location().to_string(),0,11) == "Shadow Rift" || my_location() == $location[Thugnderdome])
    if(equipped_item($slot[Shirt]) != $item[Jurassic Parka]){
      abort("Went to YR without a parka on!");
    }
