@@ -38,6 +38,8 @@ if (my_adventures() == 0 || turns <= 0){
   abort("No more alloted turns to spend!");
 }
 
+/* the following blocks are unrelated to hobopolis and are causing issues for some players (specifically the shadow rift visits) so i am commenting them out -Kuile
+
 if(item_amount($item[Autumn-aton]).to_boolean()){
   print("Sending your autumn-aton!", "green");
 
@@ -79,6 +81,8 @@ if(((get_property("_coldMedicineConsults")) <= 5) && visit_url("campground.php?a
   visit_url("campground.php?action=workshed");
   run_choice(5);
 } 
+
+*/
 
 if(item_amount($item[Hobo Nickel]) > 0 && !get_property("ezhobo_doNotCloset").to_boolean()){
   put_closet(item_amount($item[Hobo nickel]), $item[Hobo Nickel]);
