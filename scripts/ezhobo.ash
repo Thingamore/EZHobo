@@ -28,6 +28,8 @@ newline();
 print_html("<p><center>INT <font color=66b2b2>ezhobo_square </font> - Only farms the square, stopping at the desired square image.</center></p>");
 newline();
 print_html("<p><center>BOOLEAN <font color=66b2b2>ezhobo_solo</font> - Are you running this script by yourself? Defaults to false. </center></p>");
+newline();
+print_html("<p><center>BOOLEAN <font color=66b2b2>ezhobo_noAutumnaton</font> - Refrains from using your Autumn-aton.</center></p>");
 print_html("<center> To adjust or set these options, type `set {option} = {input}` in the GCLI. </center>");
 abort("");
 }
@@ -38,7 +40,8 @@ if (my_adventures() == 0 || turns <= 0){
   abort("No more alloted turns to spend!");
 }
 
-if(item_amount($item[Autumn-aton]).to_boolean()){
+// a player specifically requested keeping this feature, so i am leaving it but adding an option to disable it -Kuile
+if(item_amount($item[Autumn-aton]).to_boolean() && !get_property("ezhobo_noAutumnaton").to_boolean()){
   print("Sending your autumn-aton!", "green");
 
   string autumnaton_location;
@@ -49,6 +52,8 @@ if(item_amount($item[Autumn-aton]).to_boolean()){
   }
   cli_execute(`autumnaton send {autumnaton_location}`);
 }
+
+/* the following blocks are unrelated to hobopolis and are causing issues for some players (specifically the shadow rift visits) so i am commenting them out -Kuile
 
 if((have_effect($effect[Everything Looks Yellow]) == 0) && (available_amount($item[Jurassic Parka]).to_boolean() && (can_adventure($location[Shadow Rift]) || can_adventure($location[Thugnderdome])))){
   print("Using your free YR!", "green");  
@@ -79,6 +84,8 @@ if(((get_property("_coldMedicineConsults")) <= 5) && visit_url("campground.php?a
   visit_url("campground.php?action=workshed");
   run_choice(5);
 } 
+
+*/
 
 if(item_amount($item[Hobo Nickel]) > 0 && !get_property("ezhobo_doNotCloset").to_boolean()){
   put_closet(item_amount($item[Hobo nickel]), $item[Hobo Nickel]);
